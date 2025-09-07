@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+<body> 
+    <h1>Object properties</h1> 
+    <table id="propertiesTable"> 
+        <thead> 
+            <tr> 
+                <th>property name </th> 
+                <th>property value</th> 
+            </tr> 
+        </thead><tbody></tbody><script src="script.js"></script> 
+    </table> 
+    <script> 
+        document.addEventListener('DOMContentLoaded', function(event) { 
+    const person = { 
+        name: 'vijay', 
+        age: 21, 
+        occupation: 'webdeveloper' 
+    }; 
+    const tableBody = document.querySelector('#propertiesTable'); 
+ 
+    function addTableRow(propertyName, propertyValue) { 
+        const row = document.createElement('tr'); 
+         
+        const nameCell = document.createElement('td'); 
+        nameCell.textContent = propertyName; 
+        row.appendChild(nameCell); 
+         
+        const valueCell = document.createElement('td'); 
+        valueCell.textContent = propertyValue; 
+        row.appendChild(valueCell); 
+         
+        tableBody.appendChild(row); 
+    } 
+ 
+    for (const property in person) { 
+        if (person.hasOwnProperty(property)) { 
+            addTableRow(property, person[property]); 
+        } 
+    } 
+}); </script> 
+</body></html>

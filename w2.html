@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <title>Simple Web Page</title> 
+    <style> 
+        body{ 
+            font-family:Arial,sens-serif; 
+            line-height:1.6; 
+            margin: 20px; 
+        } 
+        h1{ 
+            color:red; 
+        } 
+        p{ 
+            color:blue; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <!--Header--> 
+    <h1> Welcome to my world</h1> 
+    <!--paragraph with basic text formatting--> 
+<p> sample webpage</p> 
+<strong> bold </strong> 
+<em> italic </em> 
+<u> underline </u> 
+<p> You can also use list</p> 
+<u1> 
+<li>item 1</li> 
+<li>item 2</li> 
+<li>item 3</li> 
+</u1> 
+<!--inserting an image--> 
+<p> here an image of beautiful landscape </p> 
+<center>  
+<img src="1.jpg"alt=Beautifullandscape width="300" height="150"/> 
+</center> 
+<!--DHTML_Simple interactive element using Javascript--> 
+<div id="magicMessagee" style="display: none;"> 
+This is a magic message! 
+</div> 
+<button onclick="ShowMagicMessage()">Show Magic Message</button> 
+<p id="magicMessage" Style="display:none;color:green;"> Hi, welcome to 
+jamal Mohamed Collge!</p> 
+<!--Javascript to show the magic  message when the button is clicked -->  
+<script> 
+function ShowMagicMessage() { 
+var messageElement = document.getElementById("magicMessage"); // 
+// ID should be without spaces 
+if (messageElement) { // Check if the element exists 
+messageElement.style.display = "block"; 
+} else { 
+console.error("Element with ID 'magicMessage' not found."); 
+} 
+} 
+</script>  
+</body> 
+</html>

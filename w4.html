@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+<body> 
+    <h2>Register form</h2> 
+    <form id="regform"> 
+        <div> 
+            <label for="uname">Username:</label> 
+            <input type="text" id="uname"> 
+            <span id="unameerror" class="error"></span> 
+        </div> 
+        <div> 
+            <label for="password">Password:</label> 
+            <input type="password" id="password"> 
+            <span id="passerror" class="error"></span> 
+        </div> 
+        <button type="submit">Register</button> 
+    </form> 
+    <script> 
+        document.getElementById("regform").addEventListener("submit", 
+function(event) { 
+            event.preventDefault();         
+            var Username = document.getElementById("uname").value; 
+            var Password = document.getElementById("password").value; 
+            if (Username==="") { 
+                document.getElementById("unameerror").textContent = 
+"Username required"; 
+            } 
+            if (Password==="") { 
+                document.getElementById("passerror").textContent = "Password required"; 
+            } 
+            if (Password.length<6) { 
+                document.getElementById("passerror").textContent = "Password must be at least 6 characters"; 
+            } 
+            if (!Username==""  && !Password.length<6){ 
+                alert("Registered successfully"); 
+                document.getElementById("regform").reset(); 
+            } 
+        }); 
+    </script> 
+</body> 
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 9: JavaScript Interaction</title>
+</head>
+<body>
+    <h1>Interactive Elements</h1>
+    
+    <button onclick="changeText()">Click Me!</button>
+    <p id="demo">This text will change when you click the button.</p>
+    
+    <h2>Color Changer</h2>
+    <button onclick="changeColor()">Change Background Color</button>
+    
+    <script>
+        function changeText() {
+            document.getElementById("demo").innerHTML = "Hello JavaScript!";
+        }
+        
+        function changeColor() {
+            const colors = ["lightblue", "lightgreen", "lightcoral", "lightyellow"];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+</body>
+</html>

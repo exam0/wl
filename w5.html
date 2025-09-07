@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>canvas graphics</title> 
+    <style> 
+        canvas { 
+            border: 1px solid black; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <canvas id="mycanvas" width="400" height="400"></canvas> 
+    <script> 
+        var canvas = document.getElementById('mycanvas'); 
+        var context = canvas.getContext('2d');  
+        context.fillStyle = "red"; // Fixed property name 
+        context.fillRect(50,50,100,100); 
+        context.beginPath(); // Fixed method name 
+        context.arc(200, 200, 50, 0, 2 * Math.PI); 
+context.fill(); // Fill the circle with red 
+context.stroke(); // Draw the line 
+</script> 
+</body> 
+</html>

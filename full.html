@@ -1,0 +1,363 @@
+1.
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Resume</title> 
+    <link rel="Style Sheet" href="style.CSS"> 
+    <style> 
+    /* internal css*/ 
+    body{ 
+        font-family: Arial, Helvetica, sans-serif; 
+        background-color: #f4f4f4; 
+    } 
+    .Resume-container{ 
+        width: 60%; 
+        margin: 50px auto; 
+        padding: 20px; 
+        background: #a55d93; 
+        box-shadow: 0010px vgba(0,0,0,0.1); 
+        border: 2px solid #007BFF; 
+        position:relative; 
+    }   
+    h1 { 
+        text-align: center; 
+        color:#007BFF; 
+        border-bottom: 2px Solid #007BFF; 
+        padding-bottom: 10px; 
+        margin-bottom: 20px; 
+    } 
+    h2{ 
+        color:#333; 
+        border-bottom:1px Solid #CCC; 
+        padding-bottom: 5px; 
+        margin-bottom: 15px; 
+    } 
+    .Section{ 
+        margin-bottom: 20px; 
+    } 
+    .profile-pic{ 
+        Position:absolute; 
+        top:20px; 
+        right:20px; 
+        width:100px; 
+        height: 100px; 
+        border-radius: 50%; 
+        border:2px Solid#007BFF; 
+    } 
+    a{ 
+        /* color: #333; */ 
+        text-decoration: none; 
+    } 
+    </style> 
+</head> 
+<body> 
+    <div class="Resume-container"> 
+        <img Src="Dhoni-2011.webp"alt="profile picture"class="profile-pic"> 
+    <h1> Biodata</h1> 
+    <p> <strong>VIJAY</strong></p> 
+    <p>Email :<a href="#"> vijay@gmail.com</a>  </p> 
+    <p> Address:Trichy</p> 
+    <div class="Section"> 
+        <h2> Skills</h2> 
+        <ul> 
+            <li> HTML</li> 
+            <li> CSS</li> 
+            <li> JAVASCRIPT</li> 
+            <li> python</li> 
+        </ul> 
+    </div> 
+<div class ="Section"></div> 
+<h2> Experience</h2> 
+<p> <strong>Junior Software Developer at xyz</strong></p> 
+<p> June 2021-June 2024</p> 
+<u1> 
+<li> Developed and maintained the company</li> 
+<li> Collaborated with designer to create user friendly </li> 
+</u1> 
+<p><strong> web Developer at xyz</strong> </p> 
+<p> June 2024-Present</p> 
+<u1> 
+<li> worked on various web application using java script frame works</li> 
+<li> Provided technical  Support and troubleshooting</li> 
+</u1> 
+<div class="Section"> 
+<h2> Education </h2> 
+<ul> 
+<li><p> <strong> Bachelor of computer Science</strong></p></li> 
+<p> Jamal Mohamed College,2021-2024</p> 
+<li> 
+<P> <strong> Master of Computer Science</strong></P> 
+<p> Jamal Mohamed College,2024-2026</p> 
+</li> 
+</ul> 
+</div> 
+</body> 
+</html> 
+STYLE.CSS 
+/*External CSS*/ 
+u1 { 
+list-style-type: disc; 
+padding-left: 20px; 
+} 
+li{ 
+} 
+margin-bottom:10px; 
+.resume -container { 
+background-color:#e9f7fd; 
+border-radius:10px; 
+} 
+.profile- pic{ 
+box-shadow: 005px rgba(0,0,0,0.1); 
+}
+
+
+
+2.
+
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <title>Simple Web Page</title> 
+    <style> 
+        body{ 
+            font-family:Arial,sens-serif; 
+            line-height:1.6; 
+            margin: 20px; 
+        } 
+        h1{ 
+            color:red; 
+        } 
+        p{ 
+            color:blue; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <!--Header--> 
+    <h1> Welcome to my world</h1> 
+    <!--paragraph with basic text formatting--> 
+<p> sample webpage</p> 
+<strong> bold </strong> 
+<em> italic </em> 
+<u> underline </u> 
+<p> You can also use list</p> 
+<u1> 
+<li>item 1</li> 
+<li>item 2</li> 
+<li>item 3</li> 
+</u1> 
+<!--inserting an image--> 
+<p> here an image of beautiful landscape </p> 
+<center>  
+<img src="1.jpg"alt=Beautifullandscape width="300" height="150"/> 
+</center> 
+<!--DHTML_Simple interactive element using Javascript--> 
+<div id="magicMessagee" style="display: none;"> 
+This is a magic message! 
+</div> 
+<button onclick="ShowMagicMessage()">Show Magic Message</button> 
+<p id="magicMessage" Style="display:none;color:green;"> Hi, welcome to 
+jamal Mohamed Collge!</p> 
+<!--Javascript to show the magic  message when the button is clicked -->  
+<script> 
+function ShowMagicMessage() { 
+var messageElement = document.getElementById("magicMessage"); // 
+// ID should be without spaces 
+if (messageElement) { // Check if the element exists 
+messageElement.style.display = "block"; 
+} else { 
+console.error("Element with ID 'magicMessage' not found."); 
+} 
+} 
+</script>  
+</body> 
+</html>
+
+
+3.
+
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+<body> 
+    <h1>Object properties</h1> 
+    <table id="propertiesTable"> 
+        <thead> 
+            <tr> 
+                <th>property name </th> 
+                <th>property value</th> 
+            </tr> 
+        </thead><tbody></tbody><script src="script.js"></script> 
+    </table> 
+    <script> 
+        document.addEventListener('DOMContentLoaded', function(event) { 
+    const person = { 
+        name: 'vijay', 
+        age: 21, 
+        occupation: 'webdeveloper' 
+    }; 
+    const tableBody = document.querySelector('#propertiesTable'); 
+ 
+    function addTableRow(propertyName, propertyValue) { 
+        const row = document.createElement('tr'); 
+         
+        const nameCell = document.createElement('td'); 
+        nameCell.textContent = propertyName; 
+        row.appendChild(nameCell); 
+         
+        const valueCell = document.createElement('td'); 
+        valueCell.textContent = propertyValue; 
+        row.appendChild(valueCell); 
+         
+        tableBody.appendChild(row); 
+    } 
+ 
+    for (const property in person) { 
+        if (person.hasOwnProperty(property)) { 
+            addTableRow(property, person[property]); 
+        } 
+    } 
+}); </script> 
+</body></html>
+
+
+4.
+
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+</head> 
+<body> 
+    <h2>Register form</h2> 
+    <form id="regform"> 
+        <div> 
+            <label for="uname">Username:</label> 
+            <input type="text" id="uname"> 
+            <span id="unameerror" class="error"></span> 
+        </div> 
+        <div> 
+            <label for="password">Password:</label> 
+            <input type="password" id="password"> 
+            <span id="passerror" class="error"></span> 
+        </div> 
+        <button type="submit">Register</button> 
+    </form> 
+    <script> 
+        document.getElementById("regform").addEventListener("submit", 
+function(event) { 
+            event.preventDefault();         
+            var Username = document.getElementById("uname").value; 
+            var Password = document.getElementById("password").value; 
+            if (Username==="") { 
+                document.getElementById("unameerror").textContent = 
+"Username required"; 
+            } 
+            if (Password==="") { 
+                document.getElementById("passerror").textContent = "Password required"; 
+            } 
+            if (Password.length<6) { 
+                document.getElementById("passerror").textContent = "Password must be at least 6 characters"; 
+            } 
+            if (!Username==""  && !Password.length<6){ 
+                alert("Registered successfully"); 
+                document.getElementById("regform").reset(); 
+            } 
+        }); 
+    </script> 
+</body> 
+</html>
+
+
+
+5.
+
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>canvas graphics</title> 
+    <style> 
+        canvas { 
+            border: 1px solid black; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <canvas id="mycanvas" width="400" height="400"></canvas> 
+    <script> 
+        var canvas = document.getElementById('mycanvas'); 
+        var context = canvas.getContext('2d');  
+        context.fillStyle = "red"; // Fixed property name 
+        context.fillRect(50,50,100,100); 
+        context.beginPath(); // Fixed method name 
+        context.arc(200, 200, 50, 0, 2 * Math.PI); 
+context.fill(); // Fill the circle with red 
+context.stroke(); // Draw the line 
+</script> 
+</body> 
+</html>
+
+
+6.
+
+
+<!DOCTYPE html> 
+<html> 
+ <head> 
+    <title>Create Table and Insert Record</title> 
+  </head> 
+  <body> 
+    <form method="POST"> 
+      <h1>Insert Record</h1> 
+      <label>Roll NO:</label> 
+      <input type="text" name="r" required><br><br>   
+      <label>Name:</label> 
+      <input type="text" name="n" required><br><br> 
+      <label>Age:</label> 
+      <input type="number" name="a" required><br><br> 
+      <input type="submit" value="Submit"> 
+    </form> 
+    <?php 
+    // Check if the form has been submitted using POST method 
+    if ($_SERVER["REQUEST_METHOD"] == "POST") { 
+      // Retrieve form data 
+      $r = $_POST['r']; 
+      $n = $_POST['n']; 
+      $a = $_POST['a']; 
+      // Establish MySQL database connection 
+      $con = mysqli_connect("localhost", "root", "", "stdu");  
+      // Check if the connection failed 
+      if (!$con) { 
+        die("Database connection failed: " . mysqli_connect_error()); 
+      } 
+ // Prepare an SQL statement to prevent SQL injection 
+      $stmt = $con->prepare("INSERT INTO student (rollno, name, age) VALUES (?, ?, ?)"); 
+      $stmt->bind_param("isi", $r, $n, $a); // "i" for integer, "s" for string 
+      // Execute the statement and check if the record was inserted 
+      if ($stmt->execute()) { 
+        echo "<p>Record inserted successfully</p>"; 
+      } else { 
+        echo "<p>Error inserting record: " . $stmt->error . "</p>"; 
+      } 
+      // Close the prepared statement and database connection 
+      $stmt->close(); 
+      $con->close(); 
+    } 
+    ?> 
+  </body> 
+</html>

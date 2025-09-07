@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 11: Advanced Features</title>
+    <style>
+        .progress-bar {
+            width: 100%;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 30px;
+            background-color: #4CAF50;
+            width: 70%;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+        }
+        
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -60px;
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <h1>Advanced HTML Features</h1>
+    
+    <h2>Progress Bar</h2>
+    <div class="progress-bar">
+        <div class="progress">70%</div>
+    </div>
+    
+    <h2>Tooltip Example</h2>
+    <p>Hover over this <span class="tooltip">text<span class="tooltiptext">This is a tooltip!</span></span> to see a tooltip.</p>
+    
+    <h2>Audio Element</h2>
+    <p>Audio element (no actual file):</p>
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <h2>Details and Summary</h2>
+    <details>
+        <summary>Click to expand</summary>
+        <p>This content is hidden by default and can be toggled by clicking the summary.</p>
+    </details>
+</body>
+</html>
