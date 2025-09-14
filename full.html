@@ -361,3 +361,188 @@ context.stroke(); // Draw the line
     ?> 
   </body> 
 </html>
+
+7.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Session Information</title>
+</head>
+<body>
+ <h1>Session Information</h1>
+ <?php
+ session_start(); // Start the session
+// Store session ID
+ $_SESSION['ID'] = session_id();
+ // Check if session creation time is set, if not set it
+ if (!isset($_SESSION['CREATION_TIME'])) {
+ $_SESSION['CREATION_TIME'] = time();
+ }
+ // Update last access time
+ $_SESSION['LAST_ACCESS_TIME'] = time();
+ ?>
+ <p><strong>SESSION ID:</strong></p>
+ <?php
+ // Corrected the variable name to output session ID
+ echo $_SESSION['ID'];
+?>
+ <p><strong>SESSION CREATION TIME:</strong></p>
+ <?php
+ // Display session creation time
+ echo date('Y-m-d H:i:s', $_SESSION['CREATION_TIME']);
+ ?>
+ <p><strong>SESSION LAST ACCESS TIME:</strong></p>
+ <?php
+ // Corrected case for session last access time variable
+ echo date('Y-m-d H:i:s', $_SESSION['LAST_ACCESS_TIME']);
+ ?>
+</body>
+</html>
+
+
+8.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>jQuery Single Element Example</title>
+ <!-- <link href="/favicon.ico" type="image/x-icon" rel="icon" /> -->
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<div class="item">item1</div>
+<div class="item">item2</div>
+<div class="item">item3</div>
+<div class="item">item4</div>
+<div class="item">item5</div>
+<script>
+ $(document).ready(function() {
+ var items = $(".item");
+ var firstItem = items.first();
+ console.log("First item:", firstItem.text());
+ var thirdItem = items.eq(2);
+ console.log("Third item:", thirdItem.text());
+ var customItem = items.filter(function(index) {
+ return index % 2 === 0;
+ }).first();
+ console.log("Custom item (even index):", customItem.text());
+ });
+</script>
+</body>
+</html>
+
+
+9.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Click and Double Click</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script>
+ $(document).ready(function() {
+ $(".clickable-ele").bind("click", function() {
+ $("<h4>Welcome to Jamal MohamedCollege</h4>").appendTo(".res");
+ });
+ $(".clickable-ele1").bind("dblclick", function() {
+ $("<h4>Thank you</h4>").appendTo(".res");
+ });
+ });
+ </script>
+</head>
+<body>
+ <div class="clickable-ele">Single Click</div>
+ <div class="clickable-ele1">Double Click</div>
+ <div class="res">Results will appear here</div>
+</body>
+</html>
+
+10.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Get Text Box Value</title>
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+ integrity="sha256-
+/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+ crossorigin="anonymous">
+ </script>
+</head>
+<body>
+ <label for="myTextBox1">Enter Your Name:</label>
+ <input type="text" id="myTextBox1"/><br>
+
+ <label for="myTextBox2">Enter Your RollNo:</label>
+ <input type="text" id="myTextBox2"/><br>
+
+ <button id="getvaluebutton">Get value</button>
+
+ <script>
+ $(document).ready(function(){
+ $("#getvaluebutton").click(function(){
+ var name = $("#myTextBox1").val();
+ var RollNo = $("#myTextBox2").val();
+ alert("Student Name: " + name);
+ alert("Student RollNo: " + RollNo);
+ });
+ });
+ </script>
+</body>
+</html> 
+
+
+11.
+
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>PHP Object to JSON Converter</title>
+ </head>
+ <body>
+ <h1>Convert PHP Object to JSON</h1>
+ <form action="convert.php" method="post">
+ <label for="name">Name:</label>
+ <input type="text" name="name" id="name" required /> <br />
+ <label for="age">Age:</label>
+ <input type="number" name="age" id="age" required /> <br />
+ <label for="city">City:</label>
+ <input type="text" name="city" id="city" required /> <br />
+ <input type="submit" value="Convert to JSON" />
+ </form>
+ </body>
+</html>
+
+
+php.
+
+
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>PHP Object to JSON Converter</title>
+ </head>
+ <body>
+ <h1>Convert PHP Object to JSON</h1>
+ <form action="convert.php" method="post">
+ <label for="name">Name:</label>
+ <input type="text" name="name" id="name" required /> <br />
+ <label for="age">Age:</label>
+ <input type="number" name="age" id="age" required /> <br />
+ <label for="city">City:</label>
+ <input type="text" name="city" id="city" required /> <br />
+ <input type="submit" value="Convert to JSON" />
+ </form>
+ </body>
+</html>
