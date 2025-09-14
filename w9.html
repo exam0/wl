@@ -1,29 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise 9: JavaScript Interaction</title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Click and Double Click</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script>
+ $(document).ready(function() {
+ $(".clickable-ele").bind("click", function() {
+ $("<h4>Welcome to Jamal MohamedCollege</h4>").appendTo(".res");
+ });
+ $(".clickable-ele1").bind("dblclick", function() {
+ $("<h4>Thank you</h4>").appendTo(".res");
+ });
+ });
+ </script>
 </head>
 <body>
-    <h1>Interactive Elements</h1>
-    
-    <button onclick="changeText()">Click Me!</button>
-    <p id="demo">This text will change when you click the button.</p>
-    
-    <h2>Color Changer</h2>
-    <button onclick="changeColor()">Change Background Color</button>
-    
-    <script>
-        function changeText() {
-            document.getElementById("demo").innerHTML = "Hello JavaScript!";
-        }
-        
-        function changeColor() {
-            const colors = ["lightblue", "lightgreen", "lightcoral", "lightyellow"];
-            const randomColor = colors[Math.floor(Math.random() * colors.length)];
-            document.body.style.backgroundColor = randomColor;
-        }
-    </script>
+ <div class="clickable-ele">Single Click</div>
+ <div class="clickable-ele1">Double Click</div>
+ <div class="res">Results will appear here</div>
 </body>
 </html>
