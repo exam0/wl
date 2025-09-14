@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise 7: Semantic HTML</title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Session Information</title>
 </head>
 <body>
-    <header>
-        <h1>My Blog</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <article>
-            <h2>My First Blog Post</h2>
-            <p><time datetime="2024-01-15">January 15, 2024</time></p>
-            <p>This is the content of my first blog post. It's about learning HTML semantic elements.</p>
-        </article>
-        
-        <aside>
-            <h3>About the Author</h3>
-            <p>I'm a web development student learning HTML and CSS.</p>
-        </aside>
-    </main>
-    
-    <footer>
-        <p>&copy; 2024 My Blog. All rights reserved.</p>
-    </footer>
+ <h1>Session Information</h1>
+ <?php
+ session_start(); // Start the session
+// Store session ID
+ $_SESSION['ID'] = session_id();
+ // Check if session creation time is set, if not set it
+ if (!isset($_SESSION['CREATION_TIME'])) {
+ $_SESSION['CREATION_TIME'] = time();
+ }
+ // Update last access time
+ $_SESSION['LAST_ACCESS_TIME'] = time();
+ ?>
+ <p><strong>SESSION ID:</strong></p>
+ <?php
+ // Corrected the variable name to output session ID
+ echo $_SESSION['ID'];
+?>
+ <p><strong>SESSION CREATION TIME:</strong></p>
+ <?php
+ // Display session creation time
+ echo date('Y-m-d H:i:s', $_SESSION['CREATION_TIME']);
+ ?>
+ <p><strong>SESSION LAST ACCESS TIME:</strong></p>
+ <?php
+ // Corrected case for session last access time variable
+ echo date('Y-m-d H:i:s', $_SESSION['LAST_ACCESS_TIME']);
+ ?>
 </body>
 </html>
