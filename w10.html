@@ -1,56 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise 10: Responsive Design</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-        
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        
-        .column {
-            flex: 50%;
-            padding: 10px;
-        }
-        
-        @media screen and (max-width: 600px) {
-            .column {
-                flex: 100%;
-            }
-        }
-        
-        .card {
-            background-color: #f1f1f1;
-            padding: 20px;
-            margin: 10px 0;
-            border-radius: 5px;
-        }
-    </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Get Text Box Value</title>
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+ integrity="sha256-
+/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+ crossorigin="anonymous">
+ </script>
 </head>
 <body>
-    <h1>Responsive Design Example</h1>
-    <p>Resize the browser window to see the effect.</p>
-    
-    <div class="row">
-        <div class="column">
-            <div class="card">
-                <h2>Card 1</h2>
-                <p>This is the first card. On larger screens, it takes up 50% of the width.</p>
-            </div>
-        </div>
-        
-        <div class="column">
-            <div class="card">
-                <h2>Card 2</h2>
-                <p>This is the second card. On smaller screens, both cards stack vertically.</p>
-            </div>
-        </div>
-    </div>
+ <label for="myTextBox1">Enter Your Name:</label>
+ <input type="text" id="myTextBox1"/><br>
+
+ <label for="myTextBox2">Enter Your RollNo:</label>
+ <input type="text" id="myTextBox2"/><br>
+
+ <button id="getvaluebutton">Get value</button>
+
+ <script>
+ $(document).ready(function(){
+ $("#getvaluebutton").click(function(){
+ var name = $("#myTextBox1").val();
+ var RollNo = $("#myTextBox2").val();
+ alert("Student Name: " + name);
+ alert("Student RollNo: " + RollNo);
+ });
+ });
+ </script>
 </body>
 </html>
